@@ -10,7 +10,7 @@ RUN pip3 install flask-mysqldb
 RUN git clone https://github.com/pjagannadha4/ci-flask.git
 WORKDIR /opt/ci-flask
 RUN mkdir templates
-RUN mv flask_main flask_main.py
+RUN mv main main.py
 RUN mv index.html templates
 RUN mv result.html templates
 ENTRYPOINT [ "python3" ]
