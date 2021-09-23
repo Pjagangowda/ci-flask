@@ -8,9 +8,9 @@ RUN  apt-get install mysql-server -y
 RUN  apt-get install libmysqlclient-dev -y
 RUN pip3 install flask-mysqldb
 RUN git clone https://github.com/pjagannadha4/ci-flask.git
-WORKDIR /opt/flask1
+WORKDIR /opt/ci-flask
 RUN mkdir templates
-RUN mv main main.py
+RUN mv flask_main flask_main.py
 RUN mv index.html templates
 RUN mv result.html templates
 ENTRYPOINT [ "python3" ]
